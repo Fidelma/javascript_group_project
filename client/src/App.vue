@@ -1,18 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CategoriesService from './services/CategoriesService.js'
+import QuestionsService from './services/QuestionsService.js'
 
 export default {
   name: 'app',
+
+  data() {
+    return {
+      questions: [],
+      categories: []
+    }
+  },
   components: {
-    HelloWorld
+
+  },
+
+  mounted() {
+    this.fetchQuestions()
+    this.fetchCategories()
+
+  },
+
+  methods: {
+    fetchQuestions(){
+      QuestionsService.getQuestions()
+        .then(questions => this.questions = questions);
+    },
+
+    fetchCategories(){
+      CategoriesService.getCategories()
+        .then(categories => this.categories = categories);
+    }
   }
+
 }
 </script>
 
