@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <qanda-grid :questions="questions" :randomIndex="randomIndex"/>
+    <qanda-grid v-if="questions.length >= 1" :questions="questions" :randomIndex="randomIndex"/>
 
     <button type="button" name="button" @click="getRandomIndex">Get random question</button>
 
@@ -20,7 +20,7 @@ export default {
     return {
       questions: [],
       categories: [],
-      alreadyAnswered: [],
+      alreadyAnswered: [0,],
       randomIndex: 0
     }
   },
