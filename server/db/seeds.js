@@ -46,11 +46,11 @@ db.questions.insertMany([
 categories: ["trees"],
 answerBody: {
   title: "The correct answer is an area to hold 52 thousand ping pong tables",
-  text: "Before we started to build cities many centuries ago, they say that 60% of the Earth was covered in Forests. Now, there is less than 10% left. Every minute forests the size of 20 football fields is cut down.
-  Deforestation is when forests are converted for other purposes by cutting down the trees to clear the land for other use. With 7 billion people on the planet, we need more land to build cities, raise livestock and grow food. People also make money by clearing the forests and selling the lumber and wood to be converted into other products, such as paper",
+  text: "Before we started to build cities many centuries ago, they say that 60% of the Earth was covered in Forests. Now, there is less than 10% left. Every minute forests the size of 20 football fields is cut down. Deforestation is when forests are converted for other purposes by cutting down the trees to clear the land for other use. With 7 billion people on the planet, we need more land to build cities, raise livestock and grow food. People also make money by clearing the forests and selling the lumber and wood to be converted into other products, such as paper",
 
   counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
   image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
+}
 },
 {
   title: "diet",
