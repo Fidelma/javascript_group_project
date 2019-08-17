@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <qanda-grid :questions="questions" :randomIndex="randomIndex"/>
-
     <button type="button" name="button" @click="getRandomIndex">Get random question</button>
+    <answer-info :questions="questions" :randomIndex="randomIndex"/>
 
 
   </div>
@@ -12,6 +12,7 @@
 import CategoriesService from './services/CategoriesService.js'
 import QuestionsService from './services/QuestionsService.js'
 import QAndAGrid from './components/QAndAGrid.vue'
+import AnswerInfo from './components/AnswerInfo.vue'
 
 export default {
   name: 'app',
@@ -25,7 +26,8 @@ export default {
     }
   },
   components: {
-    'qanda-grid': QAndAGrid
+    'qanda-grid': QAndAGrid,
+    'answer-info': AnswerInfo
 
   },
 
