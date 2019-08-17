@@ -28,7 +28,7 @@ db.questions.insertMany([
     }
   },
   {
-    title: "Trees",
+    title: "trees",
     question: "What area of forest do humans destroy every hour?",
     answerObject: [{
       type: "correct",
