@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <qanda-grid v-if="questions.length >= 1" :questions="questions" :randomIndex="randomIndex"/>
+    <qanda-grid v-if="questions.length >= 1" :questions="questions" :randomIndex="randomIndex" :randomList="randomList"/>
 
     <button type="button" name="button" @click="getRandomIndex">Get random question</button>
 
@@ -34,6 +34,14 @@ export default {
     this.fetchCategories()
     // this.getRandomIndex()
 
+  },
+
+  computed: {
+    randomList: function(){
+      return this.questions[this.randomIndex].answerObject.sort(function(){
+        return 0.5 - Math.random()
+      });
+    }
   },
 
   methods: {
