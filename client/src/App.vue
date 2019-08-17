@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <qanda-grid v-if="questions.length >= 1" :questions="questions" :randomIndex="randomIndex" :randomList="randomList"/>
+    <qanda-grid v-if="questions.length >= 1" :randomisedQuestions="questions" :index="index" :randomList="randomList"/>
 
     <button type="button" name="button" @click="getRandomIndex">Get random question</button>
 
@@ -21,7 +21,7 @@ export default {
       questions: [],
       categories: [],
       alreadyAnswered: [0,],
-      randomIndex: 0
+      index: 0
     }
   },
   components: {
@@ -37,12 +37,19 @@ export default {
   },
 
   computed: {
+    randomisedQuestions: function(){
+      return this.questions.sort(function(){
+        return 0.5 - Math.random()
+      });
+    },
     randomList: function(){
-      return this.questions[this.randomIndex].answerObject.sort(function(){
+      return this.randomisedQuestions[this.index].answerObject.sort(function(){
         return 0.5 - Math.random()
       });
     }
   },
+
+  //Trying to update question array so that question come in random order
 
   methods: {
     fetchQuestions(){
@@ -56,7 +63,8 @@ export default {
     },
 
     getRandomIndex(){
-      this.randomIndex = Math.floor(Math.random() * this.questions.length)
+      this.index += 1
+      // = Math.floor(Math.random() * this.questions.length)
     }
   }
 
