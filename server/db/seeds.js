@@ -18,7 +18,14 @@ db.questions.insertMany([
       body: "86,800 olympic swimming pools"
     }
   ],
-    categories: ["oceans"]
+    categories: ["oceans"],
+    answerBody: {
+      title: "All of these are correct",
+      text: "A staggering 217 billion tons (197 billion metric tons) of meltwater flowed off of Greenland's ice sheet into the Atlantic Ocean this July. The worst day of melting was July 31, when 11 billion tons (10 billion metric tons) of melted ice poured into the ocean.",
+      counter1URL:"https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?",
+      image: "https://www.adn.com/resizer/E38reqe1JWUm5W_N6RNWZWoyiHE=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2017/08/03093908/exit_glacier_online.jpg"
+
+    }
   },
   {
     title: "Trees",
@@ -39,11 +46,11 @@ db.questions.insertMany([
     categories: ["trees"]
   },
   {
-    title: "population",
-    question: "To make an average hamburger, it takes:",
+    title: "diet",
+    question: "To make ONE average hamburger, it takes:",
     answerObject: [{
-      type: "correct",
-      body: "Equivalent of 14.5 baths"
+      type: "incorrect",
+      body: "Equivalent of 6 baths"
     },
     {
       type: "incorrect",
@@ -51,10 +58,10 @@ db.questions.insertMany([
     },
     {
       type: "incorrect",
-      body: "An area the size of the meadows every day"
+      body: "The space required for 1.4 ping pong tables"
     }
   ],
-    categories: ["population"]
+    categories: ["diet", "water"]
   },
 ])
 
