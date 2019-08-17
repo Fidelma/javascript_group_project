@@ -57,7 +57,7 @@ db.questions.insertMany([
       body: "The amount of energy to charge your phone for a year"
     },
     {
-      type: "incorrect",
+      type: "correct",
       body: "The space required for 1.4 ping pong tables"
     }
   ],
