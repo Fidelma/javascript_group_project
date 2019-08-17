@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <qanda-grid v-if="questions.length >= 1" :randomisedQuestions="questions" :index="index" :randomList="randomList"/>
+    <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="randomisedQuestions" :index="index" :randomList="randomList"/>
 
-    <button type="button" name="button" @click="getRandomIndex">Get random question</button>
+    <button v-if="endOfQuestions" type="button" name="button" @click="getRandomIndex">Get random question</button>
+
+    <p v-if="!endOfQuestions">End of Questions</p>
 
 
   </div>
@@ -20,8 +22,8 @@ export default {
     return {
       questions: [],
       categories: [],
-      alreadyAnswered: [0,],
-      index: 0
+      index: 0,
+      endOfQuestions: true
     }
   },
   components: {
@@ -33,6 +35,7 @@ export default {
     this.fetchQuestions()
     this.fetchCategories()
     // this.getRandomIndex()
+    // this.randomisedQuestions()
 
   },
 
@@ -63,9 +66,19 @@ export default {
     },
 
     getRandomIndex(){
+      if (this.index < (this.questions.length - 1 )){
       this.index += 1
-      // = Math.floor(Math.random() * this.questions.length)
+    } else {
+      this.endOfQuestions = false
     }
+      // = Math.floor(Math.random() * this.questions.length)
+    },
+
+    // randomisedQuestions() {
+    //   return this.questions.sort(function(){
+    //     return 0.5 - Math.random()
+    //   });
+    // },
   }
 
 }

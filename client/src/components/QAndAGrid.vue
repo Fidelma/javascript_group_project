@@ -3,7 +3,7 @@
 
 
   <h3>{{questions[index].question}}</h3>
-  <ul v-for="answer in this.randomList">
+  <ul v-for="answer in randomList">
     <li>{{answer.body}}</li>
   </ul>
   <!-- <p>{{questions[0].answerObject}}</p> -->
