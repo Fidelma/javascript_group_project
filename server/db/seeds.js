@@ -3,8 +3,23 @@ db.dropDatabase();
 
 db.questions.insertMany([
   {
-    question: "How long will fidelma torture mike for?",
-    answer: "She's not sure"
+    title: "Greenlands Ice Sheet",
+    question: "How much ice melted from the Greenland ice sheet in July 2019",
+    answerObject: [{
+      type: "correct",
+      body: "217 billion tonnes"
+    },
+    {
+      type: "correct",
+      body: "Equivalet of almost 30 times Loch Ness"
+    },
+    {
+      type: "correct",
+      body: "86,800 olympic swimming pools"
+    }
+
+  ]
+    categories: ["oceans"]
   },
   {
     question: "How long will mike torture fidelma for?",
