@@ -1,10 +1,13 @@
 <template lang="html">
-  <div class="">
-
-    <p>{{questions[randomIndex].answerBody.title}}</p>
+  <div class="answerContainer">
+    <h2>Answer</h2>
+    <h2>{{questions[randomIndex].answerBody.title}}</h2>
     <p>{{questions[randomIndex].answerBody.text}}</p>
     <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
-    <img v-bind:src="questions[randomIndex].answerBody.image" alt="">
+    <div class="image-details">
+      <p>{{questions[randomIndex].answerBody.imageDetail}}</p>
+      <img v-bind:src="questions[randomIndex].answerBody.image" alt="">
+    </div>
 
   </div>
 </template>
@@ -20,11 +23,24 @@ export default {
 
 <style lang="css" scoped>
 img {
-  width:300px;
-  height:250px;
+  width:500px;
+  height:450px;
+  padding: 15px;
 }
 
 iframe {
   color:black;
 }
+
+.answerContainer {
+  border-style: double;
+  margin-top: 60px;
+}
+
+.image-details {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+}
+
 </style>
