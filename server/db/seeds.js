@@ -11,7 +11,7 @@ db.questions.insertMany([
     },
     {
       type: "correct",
-      body: "Equivalet of almost 30 times Loch Ness"
+      body: "Equivalent of almost 30 times Loch Ness"
     },
     {
       type: "correct",
@@ -23,7 +23,8 @@ db.questions.insertMany([
     title: "All of these are correct",
     text: "A staggering 217 billion tons (197 billion metric tons) of meltwater flowed off of Greenland's ice sheet into the Atlantic Ocean this July. The worst day of melting was July 31, when 11 billion tons (10 billion metric tons) of melted ice poured into the ocean.",
     counter1URL:"https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?",
-    image: "https://www.adn.com/resizer/E38reqe1JWUm5W_N6RNWZWoyiHE=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2017/08/03093908/exit_glacier_online.jpg"
+    image: "https://www.adn.com/resizer/E38reqe1JWUm5W_N6RNWZWoyiHE=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2017/08/03093908/exit_glacier_online.jpg",
+    imageDetail: "Exit gacier in Seward, Alaska is a visusal indicator of the effect that climate change is having on glaciers, the entry road to the glacier is marked with signposts detailing the year that the glacier stood at that marker."
 
   }
 },
