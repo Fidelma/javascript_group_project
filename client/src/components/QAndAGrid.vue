@@ -1,14 +1,15 @@
 <template lang="html">
   <div class="">
 
-  <!-- <div class="" v-for="question in questions"> -->
-  <ul>
-    <li>{{questions[randomIndex].question}}</li>
-    <li>{{questions[randomIndex].answer}}</li>
+
+  <h3>{{questions[randomIndex].question}}</h3>
+  <ul v-for="answer in questions[randomIndex].answerObject">
+    <li>{{answer.body}}</li>
   </ul>
+  <!-- <p>{{questions[0].answerObject}}</p> -->
 
   </div>
-<!-- </div> -->
+
 
 </template>
 
