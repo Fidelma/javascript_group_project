@@ -38,6 +38,24 @@ db.questions.insertMany([
   ],
     categories: ["trees"]
   },
+  {
+    title: "population",
+    question: "To make an average hamburger, it takes:",
+    answerObject: [{
+      type: "correct",
+      body: "Equivalent of 14.5 baths"
+    },
+    {
+      type: "incorrect",
+      body: "The amount of energy to charge your phone for a year"
+    },
+    {
+      type: "incorrect",
+      body: "An area the size of the meadows every day"
+    }
+  ],
+    categories: ["population"]
+  },
 ])
 
 db.categories.insertMany([
