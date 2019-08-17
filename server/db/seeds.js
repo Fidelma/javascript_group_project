@@ -17,14 +17,27 @@ db.questions.insertMany([
       type: "correct",
       body: "86,800 olympic swimming pools"
     }
-
-  ]
+  ],
     categories: ["oceans"]
   },
   {
-    question: "How long will mike torture fidelma for?",
-    answer: "he's not sure"
-  }
+    title: "Trees",
+    question: "What area of forest do humans destroy every hour?",
+    answerObject: [{
+      type: "correct",
+      body: "An area to hold 52 thousand ping pong tables"
+    },
+    {
+      type: "incorrect",
+      body: "Murrayfield stadium every 20 minutes"
+    },
+    {
+      type: "incorrect",
+      body: "An area the size of the meadows every day"
+    }
+  ],
+    categories: ["trees"]
+  },
 ])
 
 db.categories.insertMany([
