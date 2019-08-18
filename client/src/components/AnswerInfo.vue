@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="answerContainer">
     <h2>Answer</h2>
-    <h2>{{questions[randomIndex].answerBody.title}}</h2>
-    <p>{{questions[randomIndex].answerBody.text}}</p>
+    <h2>{{questions[index].answerBody.title}}</h2>
+    <p>{{questions[index].answerBody.text}}</p>
     <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
     <div class="image-details">
-      <p>{{questions[randomIndex].answerBody.imageDetail}}</p>
-      <img v-bind:src="questions[randomIndex].answerBody.image" alt="">
+      <p>{{questions[index].answerBody.imageDetail}}</p>
+      <img v-bind:src="questions[index].answerBody.image" alt="">
     </div>
 
   </div>
@@ -17,7 +17,7 @@
 <script>
 export default {
   name: "answer-info",
-  props: ["questions", "randomIndex"]
+  props: ["questions", "index"]
 }
 </script>
 
