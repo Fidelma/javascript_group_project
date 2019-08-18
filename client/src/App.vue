@@ -6,7 +6,7 @@
 
     <p v-else>End of Questions</p>
 
-    <answer-info v-if="questions.length >= 1" :questions="questions" :index="index"/>
+    <answer-info v-if="questions.length >= 1 && correctAnswer" :questions="questions" :index="index"/>
 
 
   </div>
@@ -17,6 +17,8 @@ import CategoriesService from './services/CategoriesService.js'
 import QuestionsService from './services/QuestionsService.js'
 import QAndAGrid from './components/QAndAGrid.vue'
 import AnswerInfo from './components/AnswerInfo.vue'
+import { eventBus } from '@/main.js'
+
 
 export default {
   name: 'app',
@@ -26,7 +28,8 @@ export default {
       questions: [],
       categories: [],
       index: 0,
-      endOfQuestions: true
+      endOfQuestions: true,
+      correctAnswer: false
     }
   },
   components: {
@@ -40,6 +43,9 @@ export default {
     this.fetchCategories()
     // this.getRandomIndex()
     // this.randomisedQuestions()
+    eventBus.$on('correct-answer', (answer) => {
+      this.correctAnswer = answer
+    })
 
   },
 
@@ -70,6 +76,7 @@ export default {
     },
 
     getRandomIndex(){
+      this.correctAnswer = false
       if (this.index < (this.questions.length - 1 )){
       this.index += 1
     } else {
