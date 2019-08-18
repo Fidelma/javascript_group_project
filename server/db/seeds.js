@@ -6,15 +6,15 @@ db.questions.insertMany([
     title: "Greenlands Ice Sheet",
     question: "How much ice melted from the Greenland ice sheet in July 2019",
     answerObject: [{
-      type: "correct",
+      type: true,
       body: "217 billion tonnes"
     },
     {
-      type: "correct",
+      type: true,
       body: "Equivalent of almost 30 times Loch Ness"
     },
     {
-      type: "correct",
+      type: true,
       body: "86,800 olympic swimming pools"
     }
   ],
@@ -32,44 +32,73 @@ db.questions.insertMany([
   title: "Trees",
   question: "What area of forest do humans destroy every hour?",
   answerObject: [{
-    type: "correct",
+    type: true,
     body: "An area to hold 52 thousand ping pong tables"
   },
   {
-    type: "incorrect",
+    type: false,
     body: "Murrayfield stadium every 20 minutes"
   },
   {
-    type: "incorrect",
+    type: false,
     body: "An area the size of the meadows every day"
   }
 ],
 categories: ["trees"],
 answerBody: {
   title: "The correct answer is an area to hold 52 thousand ping pong tables",
-  text: "Before we started to build cities many centuries ago, they say that 60% of the Earth was covered in Forests. Now, there is less than 10% left. Every minute forests the size of 20 football fields is cut down. Deforestation is when forests are converted for other purposes by cutting down the trees to clear the land for other use. With 7 billion people on the planet, we need more land to build cities, raise livestock and grow food. People also make money by clearing the forests and selling the lumber and wood to be converted into other products, such as paper",
-
+  facts: [{
+    fact: "one",
+    body: "Every minute forests the size of 20 football fields are cut down."
+  },
+  {
+    fact: "two",
+    body: "Every minute forests the size of 20 football fields are cut down."
+  },
+  {
+    fact: "three",
+    body: "Every minute forests the size of 20 football fields are cut down."
+  }
+  ],
   counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
   image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
 }
 },
 {
   title: "diet",
-  question: "To make ONE average hamburger, it takes:",
+  question: "To make ONE average hamburger (200g), it takes:",
   answerObject: [{
-    type: "incorrect",
-    body: "Equivalent of 6 baths"
+    type: false,
+    body: "The equivalent of 6 baths of water"
   },
   {
-    type: "incorrect",
+    type: false,
     body: "The amount of energy to charge your phone for a year"
   },
   {
-    type: "incorrect",
+    type: true,
     body: "The space required for 1.4 ping pong tables"
   }
 ],
-categories: ["diet", "water"]
+categories: ["diet", "water"],
+answerBody: {
+  title: "The correct answer is the space required for 1.4 ping pong tables",
+  facts: [{
+    fact: "one",
+    body: "It actually takes the equivalent of 37 baths of water to make ONE average hamburger"
+  },
+  {
+    fact: "two",
+    body: "The amount of energy to charge your phone for 4.5 years"
+  },
+  {
+    fact: "three",
+    body: "Every minute forests the size of 20 football fields are cut down."
+  }
+  ],
+  counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
+  image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
+}
 },
 ])
 
