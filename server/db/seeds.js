@@ -66,18 +66,18 @@ answerBody: {
 },
 {
   title: "diet",
-  question: "To make ONE average hamburger (200g), it takes:",
+  question: "To make ONE average hamburger (200g):",
   answerObject: [{
     type: false,
-    body: "The equivalent of 6 baths of water"
+    body: "It takes the equivalent of 6 baths of water"
   },
   {
     type: false,
-    body: "The amount of energy to charge your phone for a year"
+    body: "It takes the same amount of energy to charge your phone for a year"
   },
   {
     type: true,
-    body: "The space required for 1.4 ping pong tables"
+    body: "It produces the equivalent pollutants as driving a car 200 miles"
   }
 ],
 categories: ["diet", "water"],
@@ -93,7 +93,7 @@ answerBody: {
   },
   {
     fact: "three",
-    body: "Every minute forests the size of 20 football fields are cut down."
+    body: "It also contributes to the loss of xxx in deforestation,"
   }
   ],
   counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
