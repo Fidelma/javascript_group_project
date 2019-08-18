@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <qanda-grid v-if="questions.length >= 1" :questions="questions" :randomIndex="randomIndex" :randomList="randomList"/>
+    <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="randomisedQuestions" :index="index" :randomList="randomList"/>
 
-    <button type="button" name="button" @click="getRandomIndex">Get random question</button>
+    <button v-if="endOfQuestions" type="button" name="button" @click="getRandomIndex">Get random question</button>
+
+    <p v-if="!endOfQuestions">End of Questions</p>
+
     <answer-info :questions="questions" :randomIndex="randomIndex"/>
 
 
@@ -22,8 +25,8 @@ export default {
     return {
       questions: [],
       categories: [],
-      alreadyAnswered: [0,],
-      randomIndex: 0
+      index: 0,
+      endOfQuestions: true
     }
   },
   components: {
@@ -36,16 +39,24 @@ export default {
     this.fetchQuestions()
     this.fetchCategories()
     // this.getRandomIndex()
+    // this.randomisedQuestions()
 
   },
 
   computed: {
+    randomisedQuestions: function(){
+      return this.questions.sort(function(){
+        return 0.5 - Math.random()
+      });
+    },
     randomList: function(){
-      return this.questions[this.randomIndex].answerObject.sort(function(){
+      return this.randomisedQuestions[this.index].answerObject.sort(function(){
         return 0.5 - Math.random()
       });
     }
   },
+
+  //Trying to update question array so that question come in random order
 
   methods: {
     fetchQuestions(){
@@ -59,8 +70,19 @@ export default {
     },
 
     getRandomIndex(){
-      this.randomIndex = Math.floor(Math.random() * this.questions.length)
+      if (this.index < (this.questions.length - 1 )){
+      this.index += 1
+    } else {
+      this.endOfQuestions = false
     }
+      // = Math.floor(Math.random() * this.questions.length)
+    },
+
+    // randomisedQuestions() {
+    //   return this.questions.sort(function(){
+    //     return 0.5 - Math.random()
+    //   });
+    // },
   }
 
 }

@@ -2,9 +2,9 @@
   <div class="question-grid">
 
 
-  <h3>{{questions[randomIndex].question}}</h3>
+  <h3>{{questions[index].question}}</h3>
   <div class="question">
-      <button class="" v-for="answer in this.randomList">{{answer.body}}</button>
+      <button class="" v-for="answer in randomList">{{answer.body}}</button>
   </div>
   <!-- <p>{{questions[0].answerObject}}</p> -->
 
@@ -16,7 +16,7 @@
 <script>
 export default {
   name: 'qanda-grid',
-  props: ['questions', 'randomIndex', 'randomList']
+  props: ['questions', 'index', 'randomList']
 
 }
 </script>
