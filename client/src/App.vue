@@ -6,7 +6,7 @@
 
     <p v-if="!endOfQuestions">End of Questions</p>
 
-    <answer-info :questions="questions" :randomIndex="randomIndex"/>
+    <answer-info :questions="questions" :index="index"/>
 
 
   </div>
