@@ -2,12 +2,12 @@
   <div id="app">
     <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="questions" :index="index" :randomList="randomList"/>
 
+    <button v-if="endOfQuestions" type="button" name="button" @click="getRandomIndex">Next Question</button>  
 
     <p v-else>End of Questions</p>
 
     <answer-info v-if="questions.length >= 1 && correctAnswer" :questions="questions" :index="index"/>
 
-    <button v-if="endOfQuestions" type="button" name="button" @click="getRandomIndex">Next Question</button>  
 
   </div>
 </template>
