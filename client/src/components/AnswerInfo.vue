@@ -4,10 +4,10 @@
     <h2>{{questions[index].answerBody.title}}</h2>
     <p>{{questions[index].answerBody.text}}</p>
     <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
-    <div class="image-details">
-      <p>{{questions[index].answerBody.imageDetail}}</p>
+    <ul class="image-details">
+      <li v-for="fact in questions[index].answerBody.facts">{{fact.body}}</li>
       <img v-bind:src="questions[index].answerBody.image" alt="">
-    </div>
+    </ul>
 
   </div>
 </template>
@@ -38,9 +38,9 @@ iframe {
 }
 
 .image-details {
-  display: flex;
+  /* display: flex;
   /* flex-wrap: wrap; */
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */ 
 }
 
 </style>
