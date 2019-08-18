@@ -21,8 +21,8 @@ export default {
   props: ['questions', 'index', 'randomList'],
   methods: {
     checkAnswer(id, answer){
-      if(answer.type === "correct"){
-        eventBus.$emit('correct-answer', true)
+      if(answer.type){
+        eventBus.$emit('correct-answer', answer.type)
       }
 
     }
