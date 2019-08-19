@@ -21,7 +21,7 @@ export default {
   methods: {
     checkAnswer(id, answer){
       if(answer.type){
-        eventBus.$emit('correct-answer', answer.type);
+        eventBus.$emit('correct-answer', answer.type)
         const button = document.getElementById("question")
         element.classList.add("correct-answer")
       }else {
