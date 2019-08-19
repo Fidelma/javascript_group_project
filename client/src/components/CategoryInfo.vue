@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="categoryContainer">
     <ul>
-      <li v-for="category in categories[selectedCategory].text">{{category.body}}</li>
+      <li v-for="category in currentCategory.text">{{category.body}}</li>
     </ul>
 
 
@@ -14,7 +14,7 @@ import { eventBus } from '@/main.js'
 
 export default {
   name: 'category-info',
-  props: ['categories', 'selectedCategory']
+  props: ['currentCategory']
 
 }
 </script>
