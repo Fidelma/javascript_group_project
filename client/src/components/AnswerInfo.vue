@@ -9,6 +9,8 @@
       <img v-bind:src="questions[index].answerBody.image" alt="">
     </ul>
 
+    <button type="button" name="button" v-for="category in questions[index].categories">Read more about {{category}}</button>
+
   </div>
 </template>
 
@@ -40,7 +42,7 @@ iframe {
 .image-details {
   /* display: flex;
   /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */ 
+  /* justify-content: space-evenly; */
 }
 
 </style>
