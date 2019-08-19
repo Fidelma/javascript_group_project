@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import CategoriesService from '@/services/CategoriesService.js'
 import QuestionsService from '@/services/QuestionsService.js'
 import QAndAGrid from '@/components/QAndAGrid.vue'
 import AnswerInfo from '@/components/AnswerInfo.vue'
@@ -26,7 +25,6 @@ export default {
   data() {
     return {
       questions: [],
-      categories: [],
       index: 0,
       endOfQuestions: true,
       correctAnswer: false
@@ -40,7 +38,6 @@ export default {
 
   mounted() {
     this.fetchQuestions()
-    this.fetchCategories()
     // this.getRandomIndex()
     // this.randomisedQuestions()
     eventBus.$on('correct-answer', (answer) => {
@@ -68,11 +65,6 @@ export default {
     fetchQuestions(){
       QuestionsService.getQuestions()
         .then(questions => this.questions = questions);
-    },
-
-    fetchCategories(){
-      CategoriesService.getCategories()
-        .then(categories => this.categories = categories);
     },
 
     getRandomIndex(){
