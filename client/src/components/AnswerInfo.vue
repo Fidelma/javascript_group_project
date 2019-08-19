@@ -3,7 +3,8 @@
     <h2>Answer</h2>
     <h2>{{questions[index].answerBody.title}}</h2>
     <p>{{questions[index].answerBody.text}}</p>
-    <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
+
+    <div v-html="questions[index].answerBody.counter1URL"/>
     <ul class="image-details">
       <li v-for="fact in questions[index].answerBody.facts">{{fact.body}}</li>
       <img v-bind:src="questions[index].answerBody.image" alt="">
