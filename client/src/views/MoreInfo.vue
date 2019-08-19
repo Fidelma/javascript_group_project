@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <categories-grid :categories="categories"/>
-    <category-info v-if="selectedCategory >= 0" :categories="categories" :selectedCategory="selectedCategory"/>
+    <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
   </div>
 </template>
 
@@ -17,7 +17,8 @@ export default {
   data(){
     return{
       categories: [],
-      selectedCategory: null
+      selectedCategoryIndex: null,
+      // currentCategory: {}
     }
   },
   components: {
@@ -28,9 +29,15 @@ export default {
   mounted() {
     this.fetchCategories()
 
-    eventBus.$on('category-selected', (id) => {
-      this.selectedCategory = id
+    eventBus.$on('category-selected', (index) => {
+      this.selectedCategoryIndex = index
     })
+
+  },
+  computed: {
+    currentCategory: function(){
+      return this.categories[this.selectedCategoryIndex]
+    }
 
   },
 
