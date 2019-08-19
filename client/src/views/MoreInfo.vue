@@ -1,11 +1,12 @@
 <template lang="html">
   <div class="">
     <categories-grid :categories="categories"/>
-    <category-info :categories="categories"/>
+    <category-info v-if="selectedCategory >= 0" :categories="categories" :selectedCategory="selectedCategory"/>
   </div>
 </template>
 
 <script>
+import { eventBus } from '@/main.js'
 import CategoriesService from '@/services/CategoriesService.js'
 import CategoriesGrid from '@/components/CategoriesGrid.vue'
 import CategoryInfo from '@/components/CategoryInfo.vue'
@@ -15,7 +16,8 @@ export default {
 
   data(){
     return{
-      categories: []
+      categories: [],
+      selectedCategory: null
     }
   },
   components: {
@@ -25,6 +27,11 @@ export default {
 
   mounted() {
     this.fetchCategories()
+
+    eventBus.$on('category-selected', (id) => {
+      this.selectedCategory = id
+    })
+
   },
 
   methods: {
