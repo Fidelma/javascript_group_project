@@ -1,31 +1,33 @@
 <template>
+
   <div id="app">
-    <nav>
-    <router-link :to="{ name: 'home'}">Home</router-link>
-
-    <router-link :to="{ name: 'moreinfo'}">MoreInfo</router-link>
-  </nav>
-<router-view id="view"></router-view>
-
+    <navBar/>
+    <router-view id="view"></router-view>
   </div>
+</div>
+
 </template>
 
 <script>
 
+import navBar from '@/components/Nav.vue'
+
 
 export default {
   name: 'app',
-
+  components:{ 'navBar': navBar}
 }
+
 </script>
 
 <style>
+
+
 #app {
+  margin-top: 0px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

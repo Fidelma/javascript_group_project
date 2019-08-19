@@ -127,15 +127,15 @@ db.categories.insertMany([
     text: [
       {
         name: "one",
-        body: "first block of text here"
+        body: "We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead.We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead"
       },
       {
         name: "two",
-        body: "second block of text here"
+        body: "Deforestation is a particular concern in tropical rain forests because these forests are home to much of the world’s biodiversity. For example, in the Amazon around 17% of the forest has been lost in the last 50 years, mostly due to forest conversion for cattle ranching. Deforestation in this region is particularly rampant near more populated areas, roads and rivers, but even remote areas have been encroached upon when valuable mahogany, gold, and oil are discovered."
       },
       {
-        name: "three",
-        body: "third block of text here"
+        name: "Here are some ways that you can do to stop or prevent deforestation.",
+        body: "1. Plant a Tree where you can. 2. Go paperless at home and in the office. 3. Buy recycled products and then recycle them again. 4. Buy certified wood products. Read the labels and look for the FSC (Forest Stewardship Council) mark. 5. Support the products of companies that are committed to reducing deforestation. It’s all about business. If you don’t buy, they will be encouraged to improve their practices. 6. Don’t use Palm Oil or products with Palm Oil. "
       }
     ],
    data: {},
