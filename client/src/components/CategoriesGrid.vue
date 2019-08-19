@@ -1,7 +1,11 @@
 <template lang="html">
-  <ul>
-    <li v-for="category in categories">{{category.body}}</li>
+  <div class="">
+
+  <ul v-for="category in categories">
+    <li>{{category.title}}</li>
+    <li v-for="item in category.text">{{item.body}}</li>
   </ul>
+</div>
 </template>
 
 <script>
