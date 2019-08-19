@@ -159,5 +159,5 @@ db.categories.insertMany([
     ],
    data: {},
    counters: ['counter1', 'counter2']
-  }
+ }
 ])

@@ -1,17 +1,25 @@
 <template lang="html">
   <div class="">
 
-  <ul v-for="category in categories">
+    <button type="button" name="button" @click="selectCategory(index)" v-for="(category, index) in categories">{{category.title}}</button>
+
+  <!-- <ul v-for="category in categories">
     <li>{{category.title}}</li>
-    <li v-for="item in category.text">{{item.body}}</li>
-  </ul>
+  </ul> -->
 </div>
 </template>
 
 <script>
+import { eventBus } from '@/main.js'
+
 export default {
   name: 'categories-grid',
-  props: ['categories']
+  props: ['categories'],
+  methods: {
+    selectCategory(id){
+      eventBus.$emit('category-selected', id)
+    }
+  }
 }
 </script>
 
