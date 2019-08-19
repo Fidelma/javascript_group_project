@@ -26,7 +26,7 @@ export default {
     return {
       questions: [],
       index: 0,
-      currentQuestion: {},
+      // currentQuestion: {},
       endOfQuestions: true,
       correctAnswer: false
     }
@@ -58,8 +58,8 @@ export default {
         return 0.5 - Math.random()
       });
     },
-    getCurrentQuestion: function(){
-      return this.currentQuestion = this.questions[this.index]
+    currentQuestion: function(){
+      return this.questions[this.index];
     }
   },
 
@@ -96,6 +96,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
