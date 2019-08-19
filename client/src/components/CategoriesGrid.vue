@@ -16,8 +16,8 @@ export default {
   name: 'categories-grid',
   props: ['categories'],
   methods: {
-    selectCategory(id){
-      eventBus.$emit('category-selected', id)
+    selectCategory(index){
+      eventBus.$emit('category-selected', index)
     }
   }
 }
