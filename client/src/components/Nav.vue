@@ -11,7 +11,7 @@
 
     </div>
 
-    <div class="w3-main" style="margin-left:200px">
+    <div class="w3-main" style="margin-left:0px">
 
       <div id="main">
 
@@ -48,4 +48,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+margin-top: 0px;
+font-family: 'Avenir', Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: #2c3e50;
 </style>
