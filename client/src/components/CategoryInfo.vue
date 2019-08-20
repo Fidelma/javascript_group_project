@@ -1,12 +1,18 @@
 <template lang="html">
   <div class="categoryContainer">
+
+  <div class="counters">
+
+    <div v-html="currentCategory.counterOneSrc"></div>
+    <div v-html="currentCategory.counterTwoSrc"></div>
+
+  </div>
+  <hr>
     <ul>
       <li v-for="category in currentCategory.text">{{category.body}}</li>
     </ul>
-
-
-  </div>
-
+  <hr>
+</div>
 </template>
 
 <script>
@@ -20,4 +26,25 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.counters {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding:10px;
+  width:350px;
+  font-weight: bold;
+}
+
 </style>

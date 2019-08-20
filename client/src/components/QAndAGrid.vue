@@ -10,6 +10,7 @@
 
   </div>
 
+<!-- v-bind:class="[checkAnswer ? 'correct-answer' : '', 'incorrect-answer']" -->
 
 </template>
 
@@ -56,13 +57,18 @@ button {
   font-size: 1em;
 }
 
+button:hover {
+  background-color: white;
+  font-weight: bolder;
+}
+
 .correct {
- background-color: grey;
- font-weight: bold;
+  background-color: green;
+  font-weight: bold;
 }
 
 .incorrect {
- background-color: red;
+  background-color: red;
 
 }
 

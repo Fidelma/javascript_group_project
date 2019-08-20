@@ -22,7 +22,7 @@ db.questions.insertMany([
   answerBody: {
     title: "All of these are correct",
     text: "A staggering 217 billion tons (197 billion metric tons) of meltwater flowed off of Greenland's ice sheet into the Atlantic Ocean this July. The worst day of melting was July 31, when 11 billion tons (10 billion metric tons) of melted ice poured into the ocean.",
-    counter1URL:"https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?",
+    counter1URL:"<iframe height='100' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='300'></iframe>",
     image: "https://www.adn.com/resizer/E38reqe1JWUm5W_N6RNWZWoyiHE=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2017/08/03093908/exit_glacier_online.jpg",
     imageDetail: "Exit gacier in Seward, Alaska is a visusal indicator of the effect that climate change is having on glaciers, the entry road to the glacier is marked with signposts detailing the year that the glacier stood at that marker."
 
@@ -60,7 +60,7 @@ answerBody: {
     body: "Every minute forests the size of 20 football fields are cut down."
   }
   ],
-  counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
+  counter1URL:"<iframe height='100' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='300'></iframe>",
   image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
 }
 },
@@ -108,19 +108,20 @@ db.categories.insertMany([
     text: [
       {
         name: "one",
-        body: "first block of text here"
+        body: "The sea level has been rising at an average rate of 1.7mm per year since the beginning of the 20th Century, this rise is down to the ocean temperature rising and the expansion of sea water and melting of ice sheets, glaciers and ice caps. "
       },
       {
         name: "two",
-        body: "second block of text here"
+        body: "The ocean absorbs around a quarter of CO2 produced by human activities, this results in an increase in the acidity of the seawater which has a direct effect on marine plants and life."
       },
       {
         name: "three",
-        body: "third block of text here"
+        body: "The increase in ocean temperatures means that the ocean is not able to hold as much oxygen."
       }
     ],
    data: {},
-   counters: ['counter1', 'counter2']
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/Rising_sea_levels_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
   },
   {
     title: "Trees",
@@ -139,8 +140,9 @@ db.categories.insertMany([
       }
     ],
    data: {},
-   counters: ['counter1', 'counter2']
-  },
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/facts_on_deforestation/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/forestation_and_deforestation/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
+},
   {
     title: "Diet",
     text: [
@@ -158,6 +160,7 @@ db.categories.insertMany([
       }
     ],
    data: {},
-   counters: ['counter1', 'counter2']
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/environmental_effects_of_meat_production/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/world_food_waste_statistics/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
  }
 ])

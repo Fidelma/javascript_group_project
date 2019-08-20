@@ -16,7 +16,7 @@
       <div id="main">
 
         <div class="w3-teal">
-          <button id="openNav" class="w3-button w3-teal w3-xlarge" @click="w3_open()">&#9776;           CLIMATE QUIZ </button>
+          <button id="openNav" class="w3-button w3-teal w3-xlarge" @click="w3_open()">&#9776;</button>
           <div class="w3-container">
 
           </div>

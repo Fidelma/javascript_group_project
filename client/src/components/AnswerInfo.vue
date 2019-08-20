@@ -4,6 +4,7 @@
     <h2>{{currentQuestion.answerBody.title}}</h2>
     <p>{{currentQuestion.answerBody.text}}</p>
     <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
+    <div v-html="currentQuestion.answerBody.counter1URL"/>
     <ul class="image-details">
       <li v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</li>
       <img v-bind:src="currentQuestion.answerBody.image" alt="">

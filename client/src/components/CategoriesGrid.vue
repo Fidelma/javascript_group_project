@@ -23,5 +23,19 @@ export default {
 }
 </script>
 
+
 <style lang="css" scoped>
+
+button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 150px;
+}
+
+button:hover {
+  background-color: green;
+}
+
 </style>
