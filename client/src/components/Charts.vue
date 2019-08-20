@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="" >
-  <!-- v-if="currentCategory.data.chart.type === 'spline'"> -->
-    <line-chart :currentCategory="currentCategory" :chartData="chartData"/>
+
+    <line-chart v-if="chartData.chart.type === 'spline'" :currentCategory="currentCategory" :chartData="chartData"/>
 
   </div>
 
