@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="categoryContainer">
-    <div class="" v-for="counter in categories[selectedCategory].counters">
+    <div class="" v-for="counter in currentCategory.counters">
       <div v-html="counter.src"/>
     </div>
 
