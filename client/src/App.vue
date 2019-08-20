@@ -11,13 +11,15 @@
 
 <script>
 
-import header from '@/components/Header.vue'
+import AppHeader from '@/components/Header.vue'
 import navBar from '@/components/Nav.vue'
 
 export default {
   name: 'app',
-  components:{ 'header': header},
-  components:{ 'navBar': navBar}
+  components: {
+    'app-header': AppHeader,
+    'navBar': navBar
+ }
 }
 
 </script>
