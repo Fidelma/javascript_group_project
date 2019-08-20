@@ -1,14 +1,16 @@
 <template lang="html">
   <div class="categoryContainer">
-    <div class="" v-for="counter in currentCategory.counters">
-      <div v-html="counter.src"/>
-    </div>
+
+  <div class="counters">
+
+    <div v-html="currentCategory.counterOneSrc"></div>
+    <div v-html="currentCategory.counterTwoSrc"></div>
+
+  </div>
 
     <ul>
       <li v-for="category in currentCategory.text">{{category.body}}</li>
     </ul>
-
-
   </div>
 
 </template>
@@ -24,4 +26,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.counters {
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>
