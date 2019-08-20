@@ -140,8 +140,9 @@ db.categories.insertMany([
       }
     ],
    data: {},
-   counters: ['counter1', 'counter2']
-  },
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/facts_on_deforestation/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/forestation_and_deforestation/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
+},
   {
     title: "Diet",
     text: [
@@ -159,6 +160,7 @@ db.categories.insertMany([
       }
     ],
    data: {},
-   counters: ['counter1', 'counter2']
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/environmental_effects_of_meat_production/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/world_food_waste_statistics/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
  }
 ])
