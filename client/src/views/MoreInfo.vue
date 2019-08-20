@@ -2,6 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
+    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
   </div>
 </template>
 
@@ -10,6 +11,8 @@ import { eventBus } from '@/main.js'
 import CategoriesService from '@/services/CategoriesService.js'
 import CategoriesGrid from '@/components/CategoriesGrid.vue'
 import CategoryInfo from '@/components/CategoryInfo.vue'
+import Charts from '@/components/Charts.vue'
+import ChartsServices from '@/services/ChartsServices.js'
 
 export default {
   name: 'more-info',
@@ -17,13 +20,14 @@ export default {
   data(){
     return{
       categories: [],
-      selectedCategoryIndex: null,
+      selectedCategoryIndex: null
       // currentCategory: {}
     }
   },
   components: {
     'categories-grid': CategoriesGrid,
-    'category-info': CategoryInfo
+    'category-info': CategoryInfo,
+    'charts': Charts
   },
 
   mounted() {
@@ -37,6 +41,10 @@ export default {
   computed: {
     currentCategory: function(){
       return this.categories[this.selectedCategoryIndex]
+    },
+    chartData: function(){
+      // return this.categories[this.selectedCategoryIndex].data
+      return ChartsServices.prettyData(this.categories[this.selectedCategoryIndex].data)
     }
 
   },

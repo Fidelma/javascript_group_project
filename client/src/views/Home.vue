@@ -7,8 +7,10 @@
     <answer-info v-if="questions.length >= 1 && correctAnswer" :currentQuestion="currentQuestion"/>
 
     <button v-if="endOfQuestions" type="button" name="button" @click="incrementIndex">Next Question</button>
-    
+
     <p v-else>End of Questions</p>
+
+
 
 
   </div>
@@ -19,6 +21,7 @@ import QuestionsService from '@/services/QuestionsService.js'
 import QAndAGrid from '@/components/QAndAGrid.vue'
 import AnswerInfo from '@/components/AnswerInfo.vue'
 import { eventBus } from '@/main.js'
+import stockChart from '@/components/LineChart.vue'
 
 
 export default {
@@ -36,7 +39,8 @@ export default {
   },
   components: {
     'qanda-grid': QAndAGrid,
-    'answer-info': AnswerInfo
+    'answer-info': AnswerInfo,
+    'stock-chart': stockChart
 
   },
 
