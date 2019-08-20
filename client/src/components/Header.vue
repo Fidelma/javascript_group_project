@@ -13,7 +13,7 @@ export default {
 
 <style lang="css" scoped>
 h1 {
-  height: 200px;
+  height: ;
   background-image: url('../../public/header_image.jpg')
 }
 </style>
