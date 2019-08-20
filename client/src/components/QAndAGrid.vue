@@ -20,8 +20,8 @@ export default {
   props: ['questions', 'index', 'randomList'],
   methods: {
     checkAnswer(id, answer){
-      if(answer.type){
-        eventBus.$emit('correct-answer', answer.type)
+      if(answer.correct){
+        eventBus.$emit('correct-answer', answer.correct)
       //   const button = document.getElementById("question")
       //   element.classList.add("correct-answer")
       // }else {

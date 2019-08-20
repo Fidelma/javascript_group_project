@@ -6,15 +6,15 @@ db.questions.insertMany([
     title: "Greenlands Ice Sheet",
     question: "How much ice melted from the Greenland ice sheet in July 2019",
     answerObject: [{
-      type: true,
+      correct: true,
       body: "217 billion tonnes"
     },
     {
-      type: true,
+      correct: true,
       body: "Equivalent of almost 30 times Loch Ness"
     },
     {
-      type: true,
+      correct: true,
       body: "86,800 olympic swimming pools"
     }
   ],
@@ -32,15 +32,15 @@ db.questions.insertMany([
   title: "Trees",
   question: "What area of forest do humans destroy every hour?",
   answerObject: [{
-    type: true,
+    correct: true,
     body: "An area to hold 52 thousand ping pong tables"
   },
   {
-    type: false,
+    correct: false,
     body: "Murrayfield stadium every 20 minutes"
   },
   {
-    type: false,
+    correct: false,
     body: "An area the size of the meadows every day"
   }
 ],
@@ -68,15 +68,15 @@ answerBody: {
   title: "diet",
   question: "To make ONE average hamburger (200g):",
   answerObject: [{
-    type: false,
+    correct: false,
     body: "It takes the equivalent of 6 baths of water"
   },
   {
-    type: false,
+    correct: false,
     body: "It takes the same amount of energy to charge your phone for a year"
   },
   {
-    type: true,
+    correct: true,
     body: "It produces the equivalent pollutants as driving a car 200 miles"
   }
 ],
