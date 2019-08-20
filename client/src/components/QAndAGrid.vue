@@ -53,6 +53,11 @@ button {
   font-size: 1em;
 }
 
+button:hover {
+  background-color: white;
+  font-weight: bolder;
+}
+
 .correct-answer {
   background-color: green;
   font-weight: bold;
