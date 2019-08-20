@@ -30,4 +30,20 @@ export default {
   display: flex;
   justify-content: space-evenly;
 }
+
+ul  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding:10px;
+  width:350px;
+  font-weight: bold;
+}
 </style>
