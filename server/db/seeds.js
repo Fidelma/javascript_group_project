@@ -120,17 +120,8 @@ db.categories.insertMany([
       }
     ],
    data: {},
-   counters: [
-     {
-       name: "one",
-       src: "<iframe height='100' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='300'></iframe>"
-     },
-     {
-       name: "two",
-       src: "<iframe height='100' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='300'></iframe>"
-     },
-   ],
-   counters: ['counter1', 'counter2']
+   counterOneSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
+   counterTwoSrc: "<iframe height='200' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/Rising_sea_levels_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>"
   },
   {
     title: "Trees",
