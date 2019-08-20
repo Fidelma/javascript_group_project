@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="question-grid">
+  <div class="main question-grid">
 
 
   <h3>{{questions[index].question}}</h3>
