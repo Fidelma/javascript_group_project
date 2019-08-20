@@ -7,12 +7,13 @@
 
 <script>
 export default {
-  name: 'header'
+  name: 'app-header'
 }
 </script>
 
 <style lang="css" scoped>
 h1 {
   height: 200px;
+  background-image: url('../../public/header_image.jpg')
 }
 </style>
