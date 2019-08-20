@@ -4,7 +4,7 @@
 
   <h3>{{questions[index].question}}</h3>
   <div class="question">
-      <button @click="checkAnswer(index, answer)" v-bind:class="selectedAnswer.correct ? 'correct' : 'incorrect'" v-for="answer in randomList">{{answer.body}}</button>
+      <button @click="checkAnswer(index, answer)" v-for="(answer, index) in randomList"  v-bind:class="{correct: !selectedAnswer.correct, incorrect:(answer === selectedAnswer)}" >{{answer.body}}</button>
   </div>
   <!-- <p>{{questions[0].answerObject}}</p> -->
 
@@ -57,7 +57,7 @@ button {
 }
 
 .correct {
- background-color: green;
+ background-color: grey;
  font-weight: bold;
 }
 
