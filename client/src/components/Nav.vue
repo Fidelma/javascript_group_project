@@ -3,6 +3,8 @@
       <router-link :to="{ name: 'home'}">Home</router-link>
       <br>
       <router-link :to="{ name: 'moreinfo'}">MoreInfo</router-link>
+      <br>
+      <router-link :to="{ name: 'admin'}">Admin</router-link>
 
   </div>
 
