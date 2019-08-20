@@ -22,11 +22,11 @@ export default {
     checkAnswer(id, answer){
       if(answer.type){
         eventBus.$emit('correct-answer', answer.type)
-        const button = document.getElementById("question")
-        element.classList.add("correct-answer")
-      }else {
-        const button = document.getElementById("question")
-        element.classList.add("incorrect-answer")
+      //   const button = document.getElementById("question")
+      //   element.classList.add("correct-answer")
+      // }else {
+        // const button = document.getElementById("question")
+        // element.classList.add("incorrect-answer")
       }
 
     }
