@@ -7,12 +7,12 @@
     <div v-html="currentCategory.counterTwoSrc"></div>
 
   </div>
-
+  <hr>
     <ul>
       <li v-for="category in currentCategory.text">{{category.body}}</li>
     </ul>
-  </div>
-
+  <hr>
+</div>
 </template>
 
 <script>
@@ -46,4 +46,5 @@ li {
   width:350px;
   font-weight: bold;
 }
+
 </style>
