@@ -2,7 +2,7 @@
   <div id="">
     <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="questions" :index="index" :randomList="randomList"/>
 
-    <button v-if="endOfQuestions" type="button" name="button" @click="getRandomIndex">Next Question</button>
+    <button v-if="endOfQuestions" type="button" name="button" @click="incrementIndex">Next Question</button>
 
     <p v-else>End of Questions</p>
 
@@ -71,7 +71,7 @@ export default {
         .then(questions => this.questions = questions);
     },
 
-    getRandomIndex(){
+    incrementIndex(){
       this.correctAnswer = false
       if (this.index < (this.questions.length - 1 )){
       this.index += 1
