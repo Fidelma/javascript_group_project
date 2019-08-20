@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="header">
     <h1>We're Screwed!</h1>
     <img src="../../public/header_image.jpg" alt="">
   </div>
@@ -12,11 +12,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-h1 {
-  height: ;
-}
-
-img {
-  width: 100%;
-}
+  img{
+    min-width: 100%;
+  }
 </style>
