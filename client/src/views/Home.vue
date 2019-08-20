@@ -1,6 +1,6 @@
 <template>
   <div id="">
-    <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="questions" :index="index" :randomList="randomList"/>
+    <qanda-grid v-if="questions.length >= 1 && endOfQuestions" :questions="questions" :index="index" :randomList="randomList" :selectedAnswer="selectedAnswer"/>
 
     <button v-if="endOfQuestions" type="button" name="button" @click="incrementIndex">Next Question</button>
 
@@ -28,7 +28,8 @@ export default {
       index: 0,
       // currentQuestion: {},
       endOfQuestions: true,
-      correctAnswer: false
+      correctAnswer: false,
+      selectedAnswer: {}
     }
   },
   components: {
@@ -41,8 +42,12 @@ export default {
     this.fetchQuestions()
     // this.getRandomIndex()
     // this.randomisedQuestions()
-    eventBus.$on('correct-answer', (answer) => {
-      this.correctAnswer = answer
+    eventBus.$on('selected-answer', (answer) => {
+      this.correctAnswer = answer.correct
+      const index = this.questions[this.index].answerObject.findIndex(option => option.body === answer.body)
+      console.log(answer.body)
+      this.selectedAnswer = this.questions[this.index].answerObject[index]
+
     })
 
   },
@@ -73,6 +78,7 @@ export default {
 
     incrementIndex(){
       this.correctAnswer = false
+      this.selectedAnswer = {}
       if (this.index < (this.questions.length - 1 )){
       this.index += 1
     } else {

@@ -4,7 +4,7 @@
 
   <h3>{{questions[index].question}}</h3>
   <div class="question">
-      <button @click="checkAnswer(index, answer)"class="" v-for="answer in randomList">{{answer.body}}</button>
+      <button @click="checkAnswer(index, answer)" v-bind:class="selectedAnswer.correct ? 'correct' : 'incorrect'" v-for="answer in randomList">{{answer.body}}</button>
   </div>
   <!-- <p>{{questions[0].answerObject}}</p> -->
 
@@ -18,12 +18,14 @@ import { eventBus } from '@/main.js'
 
 export default {
   name: 'qanda-grid',
-  props: ['questions', 'index', 'randomList'],
+  props: ['questions', 'index', 'randomList', 'selectedAnswer'],
   methods: {
-    checkAnswer(id, answer){
-      if(answer.correct){
-        eventBus.$emit('correct-answer', answer.correct)
-      }
+    checkAnswer(inex, answer){
+      // if(answer.correct){
+      //   eventBus.$emit('correct-answer', answer.correct)
+      // }
+
+      eventBus.$emit('selected-answer', {body: answer.body, correct: answer.correct});
 
     }
   }
@@ -52,6 +54,16 @@ export default {
 button {
   padding: 10px;
   font-size: 1em;
+}
+
+.correct {
+ background-color: green;
+ font-weight: bold;
+}
+
+.incorrect {
+ background-color: red;
+
 }
 
 </style>
