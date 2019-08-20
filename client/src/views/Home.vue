@@ -6,7 +6,7 @@
 
     <p v-else>End of Questions</p>
 
-    <answer-info v-if="questions.length >= 1 && correctAnswer" :questions="questions" :index="index"/>
+    <answer-info v-if="questions.length >= 1 && correctAnswer" :currentQuestion="currentQuestion"/>
 
 
   </div>
@@ -26,6 +26,7 @@ export default {
     return {
       questions: [],
       index: 0,
+      // currentQuestion: {},
       endOfQuestions: true,
       correctAnswer: false
     }
@@ -56,6 +57,9 @@ export default {
       return this.randomisedQuestions[this.index].answerObject.sort(function(){
         return 0.5 - Math.random()
       });
+    },
+    currentQuestion: function(){
+      return this.questions[this.index];
     }
   },
 
@@ -92,6 +96,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

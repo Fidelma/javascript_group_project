@@ -1,16 +1,16 @@
 <template lang="html">
   <div class="answerContainer">
     <h2>Answer</h2>
-    <h2>{{questions[index].answerBody.title}}</h2>
-    <p>{{questions[index].answerBody.text}}</p>
-
-    <div v-html="questions[index].answerBody.counter1URL"/>
+    <h2>{{currentQuestion.answerBody.title}}</h2>
+    <p>{{currentQuestion.answerBody.text}}</p>
+    <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
+    <div v-html="currentQuestion.answerBody.counter1URL"/>
     <ul class="image-details">
-      <li v-for="fact in questions[index].answerBody.facts">{{fact.body}}</li>
-      <img v-bind:src="questions[index].answerBody.image" alt="">
+      <li v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</li>
+      <img v-bind:src="currentQuestion.answerBody.image" alt="">
     </ul>
 
-    <button type="button" name="button" v-for="category in questions[index].categories">Read more about {{category}}</button>
+    <button type="button" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
 
   </div>
 </template>
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "answer-info",
-  props: ["questions", "index"]
+  props: ["currentQuestion"]
 }
 </script>
 
