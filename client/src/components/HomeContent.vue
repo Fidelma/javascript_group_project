@@ -19,18 +19,25 @@ export default {
 <style lang="css" scoped>
 
 h2 {
-  padding: 30px;
-  margin-top: 25px;
+  padding: 15px;
   color: #008080;
 }
 
 .quiz-btn {
-  margin: 25px;
+  margin: 10px;
   background-color: red;
   border-radius: 175px;
   height: 350px;
   width: 350px;
   font-size: 3em;
   font-weight: bold;
+}
+
+.quiz-btn:hover {background-color: #3e8e41}
+
+.quiz-btn:active {
+  background-color: #008080;
+  box-shadow: 0 8px #666;
+  transform: translateY(4px);
 }
 </style>

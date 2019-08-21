@@ -18,7 +18,7 @@ export default {
 
 
   .header {
-  padding: 6px;
+  /* padding: 6px; */
   text-align: center;
   color: #008080;
   font-size: 75px;
