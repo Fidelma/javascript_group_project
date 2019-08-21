@@ -34,7 +34,7 @@ db.questions.insertMany([
       body: "86,800 olympic swimming pools."
     }
     ],
-    counter1URL:"<iframe height='100' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=14&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='300'></iframe>",
+    counter1URL:"<iframe height='200' src='https://www.theworldcounts.com/counters/why_is_climate_change_important/melting_ice_caps_facts/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
     image: "https://www.adn.com/resizer/E38reqe1JWUm5W_N6RNWZWoyiHE=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2017/08/03093908/exit_glacier_online.jpg",
     imageDetail: "Exit gacier in Seward, Alaska is a visusal indicator of the effect that climate change is having on glaciers, the entry road to the glacier is marked with signposts detailing the year that the glacier stood at that marker."
 
@@ -104,7 +104,7 @@ answerBody: {
     body: "It also contributes to the loss of xxx in deforestation,"
   }
   ],
-  counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
+  counter1URL:"<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/world_meat_consumption_statistics/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
   image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
 }
 },
@@ -2462,15 +2462,15 @@ db.categories.insertMany([
     text: [
       {
         name: "one",
-        body: "We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead.We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead"
+        body: "We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead.We lose trees at a rate of 50 soccer fields per minute as our food systems destroy our ecosystems. "
       },
       {
         name: "two",
-        body: "Deforestation is a particular concern in tropical rain forests because these forests are home to much of the world’s biodiversity. For example, in the Amazon around 17% of the forest has been lost in the last 50 years, mostly due to forest conversion for cattle ranching. Deforestation in this region is particularly rampant near more populated areas, roads and rivers, but even remote areas have been encroached upon when valuable mahogany, gold, and oil are discovered."
+        body: "Most of this degradation occurs in the developing tropics of Africa, Latin America, and South and Southeast Asia where hundreds of millions of chronically-hungry, smallholder farming families use destructive and short-sighted agricultural practices that further degrade their communities trees, soil, water and biodiversity, making them even more likely to migrate and more vulnerable to the climate changes that lie ahead"
       },
       {
-        name: "Here are some ways that you can do to stop or prevent deforestation.",
-        body: "1. Plant a Tree where you can. 2. Go paperless at home and in the office. 3. Buy recycled products and then recycle them again. 4. Buy certified wood products. Read the labels and look for the FSC (Forest Stewardship Council) mark. 5. Support the products of companies that are committed to reducing deforestation. It’s all about business. If you don’t buy, they will be encouraged to improve their practices. 6. Don’t use Palm Oil or products with Palm Oil. "
+        name: "three",
+        body: "Deforestation is a particular concern in tropical rain forests because these forests are home to much of the world’s biodiversity. For example, in the Amazon around 17% of the forest has been lost in the last 50 years, mostly due to forest conversion for cattle ranching. Deforestation in this region is particularly rampant near more populated areas, roads and rivers, but even remote areas have been encroached upon when valuable mahogany, gold, and oil are discovered."
       }
     ],
    data: {},

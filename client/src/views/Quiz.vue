@@ -6,9 +6,10 @@
 
     <answer-info v-if="questions.length >= 1 && correctAnswer" :currentQuestion="currentQuestion"/>
 
-    <button v-if="endOfQuestions" type="button" name="button" @click="incrementIndex">Next Question</button>
+    <button class="nextbutton" v-if="endOfQuestions" type="button" name="button" @click="incrementIndex">Next Question</button>
 
-    <p v-else>End of Questions</p>
+
+    <h1 v-else>End of Questions</h1>
 
 
 
@@ -102,5 +103,26 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.nextbutton{
+
+  background-color: #008080;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+h1{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #008080;
 }
 </style>

@@ -2,15 +2,15 @@
   <div class="main question-grid">
 
 
-  <h3>{{questions[index].question}}</h3>
-  <div class="question">
+    <h2>{{questions[index].question}}</h2>
+    <div class="question">
       <button @click="checkAnswer(index, answer)" v-for="(answer, index) in randomList"  v-bind:class="{correct: !selectedAnswer.correct, incorrect:(answer === selectedAnswer)}" >{{answer.body}}</button>
-  </div>
-  <!-- <p>{{questions[0].answerObject}}</p> -->
+    </div>
+    <!-- <p>{{questions[0].answerObject}}</p> -->
 
   </div>
 
-<!-- v-bind:class="[checkAnswer ? 'correct-answer' : '', 'incorrect-answer']" -->
+  <!-- v-bind:class="[checkAnswer ? 'correct-answer' : '', 'incorrect-answer']" -->
 
 </template>
 
@@ -45,24 +45,36 @@ export default {
 }
 
 .question-grid {
-  border-style: double;
+  border: 4px double #008080;
+  border-radius: 5px;
   margin: 30px 0px 30px 0px;
   padding: 15px 0px 15px 0px;
-
+  background-image: url();
 
 }
 
+
+
+
+
 button {
 
-  padding: 10px;
-  font-size: 1em;
-  margin: 10px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 20px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 button:hover {
 
-  font-weight: bolder;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .correct {
