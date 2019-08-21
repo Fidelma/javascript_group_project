@@ -20,10 +20,12 @@ export default {
   .header {
   padding: 6px;
   text-align: center;
-  color: black;
+  color: #008080;
   font-size: 75px;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 </style>

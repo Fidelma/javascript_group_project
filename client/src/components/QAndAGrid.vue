@@ -45,7 +45,7 @@ export default {
 }
 
 .question-grid {
-  border: 4px solid green;
+  border: 4px double #008080;
   border-radius: 5px;
   margin: 30px 0px 30px 0px;
   padding: 15px 0px 15px 0px;

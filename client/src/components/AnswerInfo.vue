@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="answerContainer">
-    <h2>Correct!</h2>
+    <h2 class="correct">Correct!</h2>
     <h2>{{currentQuestion.answerBody.title}}</h2>
     <div class="image-details">
       <div class="">
@@ -45,8 +45,10 @@ iframe {
   padding: 10px;
   margin: 10px;
   font-size: 1.2em;
-  font-weight: bold;
   width: 150px;
+  color: white;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #008080;
 }
 
 .answerContainer {
@@ -59,5 +61,16 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.correct{
+  padding: 10px;
+  margin: 10px;
+  font-size: 5.2em;
+  align-self: center;
+  width: 50px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #008080;
+}
+
 
 </style>

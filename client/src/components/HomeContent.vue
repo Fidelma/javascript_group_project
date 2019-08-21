@@ -21,6 +21,7 @@ export default {
 h2 {
   padding: 30px;
   margin-top: 25px;
+  color: #008080;
 }
 
 .quiz-btn {

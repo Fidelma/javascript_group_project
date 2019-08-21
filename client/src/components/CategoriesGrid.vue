@@ -32,10 +32,13 @@ button {
     font-size: 1.2em;
     font-weight: bold;
     width: 150px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: #008080;
 }
 
 button:hover {
-  background-color: green;
+  background-color: red;
 }
 
 </style>

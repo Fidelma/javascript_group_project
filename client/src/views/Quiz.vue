@@ -107,9 +107,9 @@ export default {
 
 .nextbutton{
 
-  background-color: #4CAF50;
+  background-color: #008080;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: black;
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -119,5 +119,10 @@ export default {
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+}
+
+h1{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #008080;
 }
 </style>
