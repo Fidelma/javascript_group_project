@@ -11,9 +11,14 @@
       <img v-bind:src="currentQuestion.answerBody.image" alt="">
     </ul>
   </div>
-    <button type="answerInfoBtn" class="answer-info-btn" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
 
-  </div>
+
+
+  <router-link :to="{name: 'moreinfo'}">
+    <button type="answerInfoBtn" class="answer-info-btn" name="button" v-for="category in currentQuestion.categories"> Read more about {{category}}</button>
+  </router-link>
+
+</div>
 </template>
 
 
