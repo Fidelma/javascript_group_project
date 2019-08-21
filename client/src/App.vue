@@ -1,8 +1,8 @@
 <template>
 
   <div id="app">
-    <app-header/>
     <navBar/>
+    <app-header/>
     <router-view class="main" id="view"></router-view>
   </div>
 </div>
@@ -33,8 +33,8 @@ export default {
 
 #app {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin-top: 0px;
@@ -46,8 +46,12 @@ export default {
   margin-left: 75px;
 }
 
-.nav { grid-area: 1 / 1 / 6 / 2; }
-.header { grid-area: 1 / 2 / 2 / 7; }
+.nav { grid-area: 1 / 1 / 6 / 2;}
+.header { grid-area: 1 / 2 / 2 / 7;}
 .main { grid-area: 2 / 2 / 5 / 7; }
 .footer { grid-area: 5 / 2 / 6 / 7; }
+
+
+
+
 </style>

@@ -2,6 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
+    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
   </div>
 </template>
 
@@ -10,6 +11,8 @@ import { eventBus } from '@/main.js'
 import CategoriesService from '@/services/CategoriesService.js'
 import CategoriesGrid from '@/components/CategoriesGrid.vue'
 import CategoryInfo from '@/components/CategoryInfo.vue'
+import Charts from '@/components/Charts.vue'
+import ChartsServices from '@/services/ChartsServices.js'
 
 export default {
   name: 'more-info',
@@ -19,11 +22,14 @@ export default {
       categories: [],
       selectedCategoryIndex: null,
       // currentCategory: {}
+      chartData: [],
+      // chartTwoData: {}
     }
   },
   components: {
     'categories-grid': CategoriesGrid,
-    'category-info': CategoryInfo
+    'category-info': CategoryInfo,
+    'charts': Charts
   },
 
   mounted() {
@@ -31,13 +37,22 @@ export default {
 
     eventBus.$on('category-selected', (index) => {
       this.selectedCategoryIndex = index
+      this.chartData = ChartsServices.getCharts(this.categories[this.selectedCategoryIndex])
+      // this.chartTwoData = ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
     })
 
   },
   computed: {
     currentCategory: function(){
       return this.categories[this.selectedCategoryIndex]
-    }
+    },
+    // chartData: function(){
+    //   // return this.categories[this.selectedCategoryIndex].data
+    //   return ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
+    // },
+    // chartTwoData: function(){
+    //   return ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
+    // }
 
   },
 

@@ -38,10 +38,10 @@ export default {
 
 .question {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 15px 0px 15px 0px;
-
+  min-height: 150px;
+  min-width: 150px;
 }
 
 .question-grid {
@@ -53,8 +53,10 @@ export default {
 }
 
 button {
+
   padding: 10px;
   font-size: 1em;
+  margin: 10px;
 }
 
 button:hover {
