@@ -20,8 +20,10 @@ export default {
   data(){
     return{
       categories: [],
-      selectedCategoryIndex: null
+      selectedCategoryIndex: null,
       // currentCategory: {}
+      chartData: {},
+      chartTwoData: {}
     }
   },
   components: {
@@ -35,6 +37,8 @@ export default {
 
     eventBus.$on('category-selected', (index) => {
       this.selectedCategoryIndex = index
+      this.chartData = ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
+      this.chartTwoData = ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
     })
 
   },
@@ -42,13 +46,13 @@ export default {
     currentCategory: function(){
       return this.categories[this.selectedCategoryIndex]
     },
-    chartData: function(){
-      // return this.categories[this.selectedCategoryIndex].data
-      return ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
-    },
-    chartTwoData: function(){
-      return ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
-    }
+    // chartData: function(){
+    //   // return this.categories[this.selectedCategoryIndex].data
+    //   return ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
+    // },
+    // chartTwoData: function(){
+    //   return ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
+    // }
 
   },
 
