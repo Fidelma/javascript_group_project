@@ -4,12 +4,12 @@
 
 <div class="form-wrap">
   <label for="title">Question Title</label>
-  <input type="text" name="" value="">
+  <input type="text" id="title" v-model="title">
 </div>
 
 <div class="form-wrap">
   <label for="question">Question</label>
-  <input type="text" name="" value="">
+  <input type="text" id="question" v-model="question">
 </div>
 <br>
 <h2>Answer Details</h2>
@@ -119,11 +119,12 @@ export default {
   },
   methods:{
     handleSubmit(event){
-      event.prevetDefault();
+      event.preventDefault();
 
 
     const payload = {
-
+      title: this.title,
+      question: this.question
     };
 
     QuestionsService.postQuestion(payload)
