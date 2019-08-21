@@ -5,7 +5,11 @@
       <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
       <router-link :to="{ name: 'home'} " @click="closeNav()">Home</router-link>
       <br>
+      <router-link :to="{ name: 'quiz'} " @click="closeNav()">Quiz</router-link>
+      <br>
       <router-link :to="{ name: 'moreinfo'}" @click="closeNav()">MoreInfo</router-link>
+      <br>
+      <router-link :to="{ name: 'admin'} " @click="closeNav()">Admin</router-link>
     </div>
 
     <span class="hamburger" style="font-size:30px;cursor:pointer" @click="openNav()">&#9776; </span>
