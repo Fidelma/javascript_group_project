@@ -11,7 +11,7 @@
       <img v-bind:src="currentQuestion.answerBody.image" alt="">
     </ul>
   </div>
-    <button type="button" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
+    <button type="answerInfoBtn" class="answer-info-btn" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
 
   </div>
 </template>
@@ -34,6 +34,14 @@ img {
 
 iframe {
   color:black;
+}
+
+.answer-info-btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 150px;
 }
 
 .answerContainer {
