@@ -1,16 +1,17 @@
 <template lang="html">
   <div class="answerContainer">
-    <h2>Answer</h2>
+    <h2>Correct!</h2>
     <h2>{{currentQuestion.answerBody.title}}</h2>
-    <p>{{currentQuestion.answerBody.text}}</p>
-    <!-- <iframe v-bind:src="questions[randomIndex].answerBody.counter1URL" width="300" height="100"></iframe> -->
-    <div v-html="currentQuestion.answerBody.counter1URL"/>
-    <ul class="image-details">
-      <li v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</li>
+    <div class="image-details">
+      <div class="">
+        <div v-html="currentQuestion.answerBody.counter1URL"/>
+        <p>{{currentQuestion.answerBody.text}}</p>
+        <div v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</div>
+      </div>
       <img v-bind:src="currentQuestion.answerBody.image" alt="">
     </ul>
-
-    <button type="button" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
+  </div>
+    <button type="answerInfoBtn" class="answer-info-btn" name="button" v-for="category in currentQuestion.categories">Read more about {{category}}</button>
 
   </div>
 </template>
@@ -35,15 +36,23 @@ iframe {
   color:black;
 }
 
+.answer-info-btn {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 150px;
+}
+
 .answerContainer {
   border-style: double;
   margin-top: 60px;
 }
 
 .image-details {
-  /* display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 </style>

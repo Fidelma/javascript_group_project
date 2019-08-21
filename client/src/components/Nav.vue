@@ -1,46 +1,35 @@
 <template lang="html">
-  <div>
+  <div class="nav">
 
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-
-      <button class="w3-bar-item w3-button w3-large"
-      @click="w3_close()">Close &times;</button>
-      <router-link :to="{ name: 'home'}">Home</router-link>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
+      <router-link :to="{ name: 'home'} " @click="closeNav()">Home</router-link>
       <br>
-      <router-link :to="{ name: 'moreinfo'}">MoreInfo</router-link>
-
+      <router-link :to="{ name: 'quiz'} " @click="closeNav()">Quiz</router-link>
+      <br>
+      <router-link :to="{ name: 'moreinfo'}" @click="closeNav()">MoreInfo</router-link>
+      <br>
+      <router-link :to="{ name: 'admin'} " @click="closeNav()">Admin</router-link>
     </div>
 
-    <div class="w3-main" style="margin-left:0px">
+    <span class="hamburger" style="font-size:30px;cursor:pointer" @click="openNav()">&#9776; </span>
 
-      <div id="main">
-
-        <div class="w3-teal">
-          <button id="openNav" class="w3-button w3-teal w3-xlarge" @click="w3_open()">&#9776;</button>
-          <div class="w3-container">
-
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+
+</div>
+
 </template>
 
 <script>
 export default {
   name: 'navBar',
-
   methods: {
-    w3_open() {
-      document.getElementById("main").style.marginLeft = "25%";
-      document.getElementById("mySidebar").style.width = "25%";
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("openNav").style.display = 'none';
+    openNav() {
+      document.getElementById("mySidenav").style.width = "25%";
     },
-    w3_close() {
-      document.getElementById("main").style.marginLeft = "0%";
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("openNav").style.display = "inline-block";
+
+    closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
     }
   }
 }
@@ -53,4 +42,66 @@ font-family: 'Avenir', Helvetica, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 color: #2c3e50;
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.hamburger {
+  float: left;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+.sidenav router-link {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav router-link:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>

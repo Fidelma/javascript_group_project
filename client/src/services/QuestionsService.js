@@ -4,5 +4,12 @@ export default {
   getQuestions(){
     return fetch(baseURL)
     .then(res => res.json())
+  },
+  postQuestion(payload){
+    return fetch(baseURL, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'application/json'}
+    })
   }
 }
