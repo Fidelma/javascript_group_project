@@ -2,7 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
-    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData" :chartTwoData="chartTwoData"/>
+    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
   </div>
 </template>
 
@@ -22,8 +22,8 @@ export default {
       categories: [],
       selectedCategoryIndex: null,
       // currentCategory: {}
-      chartData: {},
-      chartTwoData: {}
+      chartData: [],
+      // chartTwoData: {}
     }
   },
   components: {
@@ -37,8 +37,8 @@ export default {
 
     eventBus.$on('category-selected', (index) => {
       this.selectedCategoryIndex = index
-      this.chartData = ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
-      this.chartTwoData = ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
+      this.chartData = ChartsServices.getCharts(this.categories[this.selectedCategoryIndex])
+      // this.chartTwoData = ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
     })
 
   },
