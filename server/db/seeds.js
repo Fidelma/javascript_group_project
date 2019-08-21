@@ -128,6 +128,7 @@ db.categories.insertMany([
       }
     ],
     data:{
+      yAxis: 'sea level rise (inches)',
       title: "Global Average Absolute Sea Level Change, 1880-2014",
       source: "Source: EPA's Climate Change Indicators in the United States: www.epa.gov/climatechange/indicators",
       values: [
@@ -1078,6 +1079,7 @@ db.categories.insertMany([
   }
 ]},
     dataTwo:{
+      yAxis: 'Temperature rise (celsius)',
       title: "Global temperatures",
       source: "https://datahub.io/core/global-temp#resource-annual",
       values: [

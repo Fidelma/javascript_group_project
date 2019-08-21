@@ -54,6 +54,9 @@ lineChart(object, valueKey, isDataReversed = false){
     title: {
       text: title
     },
+    subtitle: {
+      text: object.source
+    },
     xAxis: {
       title: {
         text: 'year'
@@ -62,13 +65,14 @@ lineChart(object, valueKey, isDataReversed = false){
         },
     yAxis: {
       title: {
-        text: valueKey
+        text: object.yAxis
       },
     },
 
     series: [{
+      name: title,
       data: values,
-      colour: '#6fcd45',
+      colour: '#FF0000',
       animation:{
         enabled: true,
         duration: 5000
