@@ -2,7 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
-    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
+    <charts v-if="selectedCategoryIndex!=null && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
   </div>
 </template>
 
