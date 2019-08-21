@@ -104,7 +104,7 @@ answerBody: {
     body: "It also contributes to the loss of xxx in deforestation,"
   }
   ],
-  counter1URL:"https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/why_is_deforestation_a_problem/embed?",
+  counter1URL:"<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/world_meat_consumption_statistics/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
   image: "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F9f1416db39e1da11af9f0014c2589dfb%2F960x0.jpg%3Ffit%3Dscale"
 }
 },
