@@ -2,7 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
-    <charts v-if="selectedCategoryIndex!=null && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
+    <charts v-if="selectedCategoryIndex!=null && currentCategory && chartData.length >= 1" :currentCategory="currentCategory" :chartData="chartData"/>
   </div>
 </template>
 
@@ -36,6 +36,7 @@ export default {
     this.fetchCategories()
 
     eventBus.$on('category-selected', (index) => {
+      this.chartData = []
       this.selectedCategoryIndex = index
       this.chartData = ChartsServices.getCharts(this.categories[this.selectedCategoryIndex])
       // this.chartTwoData = ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
