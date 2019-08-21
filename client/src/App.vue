@@ -43,7 +43,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-right: 75px;
-  margin-left: 75px;
+
 }
 
 .nav { grid-area: 1 / 1 / 6 / 2;}
