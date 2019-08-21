@@ -26,8 +26,8 @@
   <label for="">True/False</label>
   <select v-model="answerObject[0].correct">
     <option></option>
-    <option>True</option>
-    <option>False</option>
+    <option>true</option>
+    <option>false</option>
   </select>
 </div>
 
@@ -39,8 +39,8 @@
   <label for="">True/False</label>
   <select v-model="answerObject[1].correct">
     <option></option>
-    <option>True</option>
-    <option>False</option>
+    <option>true</option>
+    <option>false</option>
   </select>
 </div>
 
@@ -53,8 +53,8 @@
   <label for="">True/False</label>
   <select v-model="answerObject[2].correct">
     <option></option>
-    <option>True</option>
-    <option>False</option>
+    <option>true</option>
+    <option>false</option>
   </select>
 </div>
 <br>
@@ -120,15 +120,15 @@ export default {
       title: "",
       question: "",
       answerObject: [{
-        correct: null,
+        correct: false,
         body: ""
       },
       {
-        correct: null,
+        correct: false,
         body: ""
       },
       {
-        correct: null,
+        correct: false,
         body: ""
       }],
       categories: [],
@@ -209,6 +209,13 @@ form {
 	background: rgba(255, 255, 255, 0.7);
 	padding: 20px;
 	margin-bottom: 40px;
+}
+input[type=text] {
+  min-width: 150px;
+  padding: 5px 5px;
+  margin: 2px 0;
+  box-sizing:
+  border-box;
 }
 
 label {

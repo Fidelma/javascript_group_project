@@ -61,11 +61,11 @@ answerBody: {
   title: "Roughly 214,500 square meters of trees are cut down every hour, this area would be able to hold 51 thousand ping pong tables",
   facts: [{
     fact: "one",
-    body: "Murrayfield stadium every 2 seconds."
+    body: "It's the same as an area the size of Murrayfield stadium every 2 seconds."
   },
   {
     fact: "two",
-    body: "An area the size of the meadows 1min 10seconds"
+    body: "It's the same as an area the size of the meadows every 1min 10seconds"
   }
   ],
   counter1URL:"<iframe height='200' src='https://www.theworldcounts.com/counters/degradation_and_destruction_of_ecosystems/forestation_and_deforestation/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",
@@ -90,18 +90,18 @@ answerBody: {
 ],
 categories: ["diet", "water"],
 answerBody: {
-  title: "The correct answer is the space required for 1.4 ping pong tables",
+  title: "It produces the equivalent pollutants as driving a car 200 miles",
   facts: [{
     fact: "one",
-    body: "It actually takes the equivalent of 37 baths of water to make ONE average hamburger"
+    body: "It actually takes the equivalent of 37 baths of water to make ONE average hamburger."
   },
   {
     fact: "two",
-    body: "The amount of energy to charge your phone for 4.5 years"
+    body: "The amount of energy to charge your phone for 4.5 years."
   },
   {
     fact: "three",
-    body: "It also contributes to the loss of xxx in deforestation,"
+    body: "It also contributes to the huge amount of deforestation."
   }
   ],
   counter1URL:"<iframe height='200' src='https://www.theworldcounts.com/counters/world_food_consumption_statistics/world_meat_consumption_statistics/embed?background_color=white&color=black&font_family=%22Helvetica+Neue%22%2C+Arial%2C+sans-serif&font_size=28&token=da6cee8234591f3a2542678e4c4510fb48b62b69' style='border: none' width='500'></iframe>",

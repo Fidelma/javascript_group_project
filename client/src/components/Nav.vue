@@ -25,7 +25,7 @@ export default {
   name: 'navBar',
   methods: {
     openNav() {
-      document.getElementById("mySidenav").style.width = "25%";
+      document.getElementById("mySidenav").style.width = "15%";
     },
 
     closeNav() {

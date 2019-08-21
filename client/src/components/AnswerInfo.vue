@@ -6,7 +6,7 @@
       <div class="">
         <div v-html="currentQuestion.answerBody.counter1URL"/>
         <p>{{currentQuestion.answerBody.text}}</p>
-        <div v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</div>
+        <div class="facts" v-for="fact in currentQuestion.answerBody.facts">{{fact.body}}</div>
       </div>
       <img v-bind:src="currentQuestion.answerBody.image" alt="">
     </ul>
@@ -32,7 +32,7 @@ export default {
 
 <style lang="css" scoped>
 img {
-  width:500px;
+  width:400px;
   height:450px;
   padding: 15px;
 }
@@ -62,12 +62,19 @@ iframe {
   justify-content: space-evenly;
 }
 
-.correct{
+.facts {
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+
+h2.correct{
   padding: 10px;
   margin: 10px;
-  font-size: 5.2em;
-  align-self: center;
-  width: 50px;
+  font-size: 3.1em;
+  text-align: center;
+
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #008080;
 }
