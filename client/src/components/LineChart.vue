@@ -2,6 +2,8 @@
   <div class="">
 
       <highcharts class="chart" :options="chartData"></highcharts>
+      <highcharts class="chart" :options="chartTwoData"></highcharts>
+
 
     </div>
 
@@ -10,7 +12,7 @@
 <script>
 export default {
   name: 'line-chart',
-  props: ['currentCategory', 'chartData'],
+  props: ['currentCategory', 'chartData', 'chartTwoData'],
   data () {
     return {
       // title: '',

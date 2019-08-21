@@ -1,7 +1,7 @@
 
 
 export default {
-  prettyData(object){
+  prettySeaLevel(object){
      const title = object.title
      const years = object.values.map((item)=> item.Year)
      const values = object.values.map((obj) => obj["CSIRO - Adjusted sea level (inches)"])
@@ -23,6 +23,30 @@ export default {
          colour: '#6fcd98'
        }]
      }
+  },
+
+  prettyGlobalTemperature(object){
+    const title = object.title
+    const years = object.values.map((item)=> item.Year).reverse()
+    const values = object.values.map((obj) => obj["Mean"]).reverse()
+    return {
+      chart: {
+        type: 'spline'
+      },
+      title: {
+        text: title
+      },
+      xAxis: {
+        title: {
+          text: 'year'
+        },
+        categories: years
+      },
+      series: [{
+        data: values,
+        colour: '#6fcd45'
+      }]
+    }
   }
 
 }

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="" >
 
-    <line-chart v-if="chartData.chart.type === 'spline'" :currentCategory="currentCategory" :chartData="chartData"/>
+    <line-chart v-if="chartData.chart.type === 'spline'" :currentCategory="currentCategory" :chartData="chartData" :chartTwoData="chartTwoData"/>
 
   </div>
 
@@ -11,7 +11,7 @@
 import LineChart from './LineChart.vue'
 export default {
   name: 'charts',
-  props: ['currentCategory', 'chartData'],
+  props: ['currentCategory', 'chartData', 'chartTwoData'],
 
   components: {
     'line-chart': LineChart

@@ -2,7 +2,7 @@
   <div class="">
     <categories-grid :categories="categories"/>
     <category-info v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory"/>
-    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData"/>
+    <charts v-if="selectedCategoryIndex >= 0 && currentCategory" :currentCategory="currentCategory" :chartData="chartData" :chartTwoData="chartTwoData"/>
   </div>
 </template>
 
@@ -44,7 +44,10 @@ export default {
     },
     chartData: function(){
       // return this.categories[this.selectedCategoryIndex].data
-      return ChartsServices.prettyData(this.categories[this.selectedCategoryIndex].data)
+      return ChartsServices.prettySeaLevel(this.categories[this.selectedCategoryIndex].data)
+    },
+    chartTwoData: function(){
+      return ChartsServices.prettyGlobalTemperature(this.categories[this.selectedCategoryIndex].dataTwo)
     }
 
   },
