@@ -1,8 +1,8 @@
 <template>
   <div class="">
 
-      <highcharts class="chart" :options="chartData"></highcharts>
-      <highcharts class="chart" :options="chartTwoData"></highcharts>
+      <highcharts class="chart" :options="chartData[0]"></highcharts>
+      <highcharts class="chart" :options="chartData[1]"></highcharts>
 
 
     </div>
@@ -15,25 +15,8 @@ export default {
   props: ['currentCategory', 'chartData', 'chartTwoData'],
   data () {
     return {
-      // title: '',
-      // points: [10, 0, 8, 2, 6, 4, 5, 5],
-      // chartType: 'Spline',
-      // seriesColor: '#6fcd98',
-      // colorInputIsSupported: null,
-      // animationDuration: 1000,
-      // chartOptions: {
-      //   chart: {
-      //     type: 'spline'
-      //   },
-      //   title: {
-      //     text: 'Sin chart'
-      //   },
-      //   series: [{
-      //     data: [10, 0, 8, 2, 6, 4, 5, 5],
-      //     color: '#6fcd98'
-      //   }]
-      // }
-      animationDuration: 1000,
+
+      animationDuration: 10000,
     }
   }
 }
