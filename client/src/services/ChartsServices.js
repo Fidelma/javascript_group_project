@@ -2,6 +2,7 @@
 
 export default {
   prettySeaLevel(object){
+    if(object.title){
      const title = object.title
      const years = object.values.map((item)=> item.Year)
      const values = object.values.map((obj) => obj["CSIRO - Adjusted sea level (inches)"])
@@ -23,9 +24,13 @@ export default {
          colour: '#6fcd98'
        }]
      }
+   } else {
+     return {}
+   }
   },
 
   prettyGlobalTemperature(object){
+    if (object.title) {
     const title = object.title
     const years = object.values.map((item)=> item.Year).reverse()
     const values = object.values.map((obj) => obj["Mean"]).reverse()
@@ -47,8 +52,10 @@ export default {
         colour: '#6fcd45'
       }]
     }
+  } else {
+    return {}
   }
-
+}
 }
 
 // chartOptions: {
