@@ -2,7 +2,9 @@
   <div class="nav">
       <router-link :to="{ name: 'home'}">Home</router-link>
       <br>
-      <router-link :to="{ name: 'moreinfo'}">MoreInfo</router-link>
+      <router-link :to="{ name: 'quiz'}">Quiz</router-link>
+      <br>
+      <router-link :to="{ name: 'moreinfo'}">More Info</router-link>
       <br>
       <router-link :to="{ name: 'admin'}">Admin</router-link>
 
